@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root
+{
+    --font-color: #002959;
+    --background-color: #fff;
+    --body-font: 'Poppins';
+    --universal-padding: 1rem;
+    --border: 1px solid #666;
+    --border-color: rgba(0, 0, 0, .3);
+}
+
+body
+{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background-color) ;
+    font-family: var(--body-font);
+}
+.home
+{
+    margin-bottom: 2rem;
+    border-bottom: var(--border) ;
+    border-color: var(--border-color);
+}
+.ownership
+{
+    background-color: black;
+    color: var(--background-color);
+    text-align: center;
+    padding: .5rem;
+}
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem var(--universal-padding);
+    position: relative;
+}
+nav input
+{
+    position: absolute;
+    right: 15%;
+    padding: .5rem var(--universal-padding);
+    border: var(--border);
+    border-color: var(--border-color);
+    border-radius: .2rem;
+}
+nav input::placeholder
+{
+    font-size: 15px;
+    opacity: .8;
+    color: var(--font-color);
+}
+a
+{
+    text-decoration: none;
+}
+a, 
+ul li
+{
+    color: var(--font-color);
+}
+.logo
+{
+    font-size: min(1.5rem);
+    font-weight: bold;
+}
+ul
+{
+    display: flex;
+    margin-right: 60%;
+    margin-left: auto;
+}
+ul li
+{
+    list-style: none;
+    margin-right: max(2rem);
+    font-weight: 500;
+    font-size: min(14px);
+    opacity: .8;
+}
+.main-content
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.image__container
+{
+    height: max(400px);
+    position: relative;
+}
+.image__container img
+{
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.image__container .overlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--background-color);
+    background-color: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease-in-out;
+}
+.image__container:hover .overlay
+{
+    top: 0;
+    opacity: 1;
+    cursor: pointer;
+    visibility: visible;
+    transform: translateX(0);
+}
+.overlay .image__title
+{
+    font-weight: bold;
+    font-size: min(3rem);
+}
+.overlay .shoe__pricing
+{
+    letter-spacing: .5rem;
+}
+
+.home__grid-item:first-child,
+.home__grid-item:last-child
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.home__grid-item:first-child
+{
+    border-radius: .3rem;
+    border: var(--border);
+    border-color: var(--border-color);
+}
+.home__header_text
+{
+    font-size: max(4rem);
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.home__mock_text
+{
+    position: absolute;
+    bottom: 1rem;
+    color: var(--font-color);
+    opacity: .8;
+}
+.home__text_2
+{
+    display: flex;
+    flex-direction: column;
+}
+.home__text_2 span
+{
+    margin-bottom: .1rem;
+    color: var(--font-color);
+    font-size: min(3rem);
+    font-weight: 900;
+}
+
+/* -- SECTION 2 */
+.section-2
+{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    padding: .5rem;
+}
+.text-content
+{
+    max-width: 55%;
+}
+.text-content > h2
+{
+    font-weight: 900;
+    font-size: max(3.5rem);
+    margin-bottom: 2rem;
+}
+.text-content > p
+{
+    line-height: 2rem;
+}
+.section-2 .image__container
+{
+    width: 40%;
+    height: 100%;
+}
+.text-content button
+{
+    margin-top: 3rem;
+    border: none;
+    outline: none;
+    background-color: rgb(80, 248, 80);
+    padding: var(--universal-padding) 2rem;
+    border-radius: .2rem;
+    color: var(--background-color);
+    font-weight: bold;
+    font-size: 20px;
+}
